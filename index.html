@@ -1,81 +1,130 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Greta Carrozza | Portfolio Digitale</title>
-  <link rel="stylesheet" href="CSS/bootstrap-grid (1).css">
-  <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="UTF-8">
+    <title>Portfolio|Greta Carrozza</title>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="CSS/bootstrap-grid (1).css">
+    <link rel="stylesheet" href="CSS/style.css">
+   
 </head>
-<body>
+<body id="top">
 
-    <!-- Logo e menu hamburger  -->
-        <div class="container">
-        <div class="row mb-5">
-        <div class="col-6">
-      <img src="img/LOGO.png" alt="Logo" class="logo">
+    <!-- HEADER -->
+    <div class="containerheader">
+    <div class="row header">
+        <a href="#top">
+        <img src="img/LOGO.png" alt="Logo" class="logo">
+        </a>
+    <svg class="hamburger" id="menuButton" xmlns="http://www.w3.org/2000/svg" width="32" height="14" viewBox="0 0 32 14" fill="none">
+       <path d="M0 1H32" stroke="black" stroke-width="2"/>
+       <path d="M0 7H32" stroke="black" stroke-width="2"/>
+       <path d="M0 13H32" stroke="black" stroke-width="2"/>
+    </svg>
+    
+    <!-- MENU TENDINA -->
+     <nav class="menu-tendina" id="menuTendina">
+    <ul>
+      <li><a href="#about">01-ABOUT</a></li>
+      <li><a href="#study">02-STUDY</a></li>
+      <li><a href="#pointofview">03-POINT OF VIEW</a></li>
+      <li><a href="#gallery">04-GALLERY</a></li>
+      <li><a href="#contact">05-CONTACT</a></li>
+    </ul>
+</nav>
+        </div>
     </div>
-        <div class="col-6 text-end">
-          <img src="img/iconamenuhamburger.png" alt="menu" class="menu">
-        </div>
-      </div>
-      
-      <!-- Nome e foto -->
-      <div class="row align-items-center">
-        <div class="col-12 col-md-6">
-          <h1>Greta<br>Carrozza</h1>
-          <p class="portfolio">Portfolio digitale</p>
-          <a href="#progetti" class="btn mt-3">Vedi i progetti</a>
-        </div>
-        <div class="col-12 col-md-6 text-center">
-            <div class="immaginedesigner">
-          <img src="img/foto_designer.JPG" alt="Greta Carrozza">
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <!-- FASCIA 2: Chi sono? -->
-<div class="sfondo">
-  <div class="about py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
-          <h2 class="chisono">Chi sono?</h2>
-          <p class="origini">Le mie origini culturali influenzano il mio approccio al design, stimolando creatività e originalità.
-          Sono una persona attenta ai dettagli e appassionata di estetica visiva, capace di trasformare idee in progetti concreti.
-          Lavoro con impegno per creare soluzioni chiare, coerenti e di impatto.</p>
-        </div>
-        <div class="col-12 col-md-6 text-center">
-          <img src="img/arco.jpg" alt="Arco d'Augusto, Rimini" class="img-fluid">
-        </div>
-      </div>
+    <!--INIZIO -->
+    <div class="containerinizio">
+    <div class="row inizio">
+        <h1>Greta <br> Carrozza</br></h1>
+        <h3>Portfolio digitale</h3>
+        <img src="img/foto_designer.JPG" alt="Greta Carrozza foto designer" class="foto_designer">
     </div>
-  </div>
-</div>
-  <!-- FASCIA 3: Immagine fiori -->
-  <div class="immaginefiore">
-    <img src="img/immaginefiore.jpeg" alt="Fiori decorativi"  >
-  </div>
+    </div>
 
-  <!-- FASCIA 4: I miei studi  -->
-   <div class="sfondo">
-  <div class="studies py-5">
-    <div class="container">
-      <div class="row
-      
-      ">
-        <div class="col-12 col-md-6 mb-4 mb-md-0">
-          <img src="img/FOTO.png" alt="Mare con gabbiani" class="img-fluid">
+    <!-- ABOUT -->
+    <div class="containerabout" id="about">
+    <div class="row about"> 
+        <div class="testo">
+            <h2>ABOUT<span class="numero">01</span></h2>
+            <p>
+                Le mie origini culturali influenzano il mio approccio al design, stimolando creatività e originalità.
+                Sono una persona attenta ai dettagli e appassionata di estetica visiva, capace di trasformare idee in progetti concreti.
+                Lavoro con impegno per creare soluzioni chiare, coerenti e di impatto.
+            </p>
         </div>
-        <div class="col-12 col-md-6">
-          <h2 class="studi">I miei studi</h2>
-          <p>Ho frequentato il Liceo Economico Sociale, dove ho sviluppato un forte interesse per le dinamiche sociali.</p>
-          <p>Successivamente, ho proseguito i miei studi all'Università di Design a San Marino, approfondendo la mia creatività e la capacità di progettare soluzioni innovative.</p>
-        </div>
-      </div>
+        <img src="img/arco.png" class="immagineabout" alt="Arco d'Augusto, Rimini" >
     </div>
-  </div>
-</div>
+    </div>
+
+    <!-- STUDY -->
+    <div class="containerstudy" id="study">
+    <div class="row study">
+        <div class="testo">
+            <h2>STUDY<span class="numero">02</span></h2>
+            <p>
+                Ho frequentato il Liceo Economico Sociale, dove ho sviluppato un forte interesse per le dinamiche sociali.
+                Successivamente, ho proseguito i miei studi all’università di Design a San Marino, approfondendo la mia creatività e la capacità di progettare soluzioni innovative.
+            </p>
+        </div>
+        <img src="img/FOTO (2).png" class="immaginestudy" alt="Maturità">
+    </div>
+    </div>
+
+    <!-- POINT OF VIEW -->
+     <div class="containerpointofview" id="pointofview">
+    <div class="row pointofview">
+        <div class="testo">
+            <h2>POINT OF VIEW<span class="numero">03</span></h2>
+            <p>
+                Per me, il design è un modo per esprimere chi sono e dare vita alle mie idee.
+                Adoro creare oggetti che non solo siano belli, ma anche pratici.
+                Considero il design come un viaggio di scoperta, dove ogni progetto rappresenta un'opportunità per crescere.
+            </p>
+        </div>
+        <img src="img/FOTO (1).png" class="immagine" alt="Università di Design San Marino">
+    </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="containergallery" id="gallery">
+    <div class="row gallery">
+        <h2>GALLERY<span class="numero">04</span></h2>
+        <div class="galleryimg">
+            <img src="img/IMMAGINE SACRO.png" alt="Progetto Sacro" class="bw-hover">
+            <h3>Workshop di Prodotto - Sacro</h3>
+            <p class="progetti">Realizzazione di una alzatina in carta per tenere il pane in tavola, incentrato sul tema della pace.</p>
+            <img src="img/IMMAGINE VORTIGA.png" alt="Progetto Vortiga" class="bw-hover">
+            <h3> Vortiga</h3> 
+            <p class="progetti">Progetto per Geometria per il design, mostra una trasformazione geometrica.</p>
+            <img src="img/IMMAGINE ASTORIA.png" alt=" Progetto Astoria" class="bw-hover">
+            <h3>Identità visiva</h3> 
+            <p class="progetti">Identità visiva per l’ex cinema Astoria di Rimini.</p>
+            <img src="img/IMMAGINE BESTIARIO.png" alt=" Progetto Bestiario" class="bw-hover">
+            <h3> Workshop di Serigrafia - Bestiario</h3> 
+            <p class="progetti">Realizzazione di un Booklet interamente realizzato a mano in serigrafia.</p>
+        </div>
+    </div>
+    </div>
+        <!--CONTACT-->
+        <div class="containercontact" id="contact"> 
+        <div class=" row contact">
+          <h2>CONTACT<span class="numero">05</span></h2>
+          <p><a href="https://www.instagram.com/gretacarrozza_/">@gretacarrozza_</a></p>
+          <p><a href="mailto:carrozza.gretaa@gmail.com">carrozza.gretaa@gmail.com</a></p>
+        </div>
+        </div>
+
+    <script>
+    const menuButton = document.getElementById("menuButton");
+    const menuTendina = document.getElementById("menuTendina");
+
+    menuButton.addEventListener("click", function() {
+        menuTendina.classList.toggle("aperto");
+    });
+</script>
+
 </body>
 </html>
