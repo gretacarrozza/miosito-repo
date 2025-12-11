@@ -22,15 +22,15 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: #D9D9D9;
     z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
 }
 
 .logo {
-    height: 50px;
-    width: auto;
+    height: 75px;
+    width: 70;
 }
 
 .hamburger {
@@ -122,7 +122,7 @@ h2 {
 
 h3 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     margin-top: 5px;
 }
 
@@ -208,10 +208,14 @@ img:hover {
     color: #666;
 }
 
-/* MEDIA QUERIES - TABLET */
-@media (min-width: 768px) {
+/* MEDIA QUERIES - PHONE */
+@media (min-width: 375px) {
     h1 {
         font-size: 72px;
+    }
+
+    .menu-tendina {
+        width: 175px;
     }
 
     h2 {
@@ -265,7 +269,7 @@ img:hover {
 }
 
 /* MEDIA QUERIES - DESKTOP */
-@media (min-width: 992px) {
+@media (min-width: 1440px) {
     .menu-tendina {
         width: 400px;
     }
