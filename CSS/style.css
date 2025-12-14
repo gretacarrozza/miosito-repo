@@ -1,6 +1,4 @@
-/* ===================================
-   1. RESET & BASE
-   =================================== */
+/* 1. RESET & BASE */
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +19,7 @@ html {
 }
 
 
-/* ===================================
-   2. HEADER & NAVIGATION
-   =================================== */
+/* 2. HEADER & NAVIGATION */
 .header-fixed {
     position: fixed;
     top: 0;
@@ -38,11 +34,13 @@ html {
     height: 75px;
     width: auto;
     display: block;
+    margin-left: 100px;
 }
 
 .hamburger {
     cursor: pointer;
     transition: opacity 0.3s ease;
+    margin-right: 120px;
 }
 
 .hamburger:hover {
@@ -54,9 +52,7 @@ html {
 }
 
 
-/* ===================================
-   3. MENU TENDINA
-   =================================== */
+/* 3. MENU TENDINA */
 .menu-tendina {
     position: fixed;
     top: 0;
@@ -98,9 +94,7 @@ html {
 }
 
 
-/* ===================================
-   4. SEZIONI
-   =================================== */
+/* 4. SEZIONI*/
 section {
     padding: 60px 0;
 }
@@ -123,9 +117,7 @@ section {
 }
 
 
-/* ===================================
-   5. TIPOGRAFIA
-   =================================== */
+/* 5. TIPOGRAFIA */
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -138,6 +130,13 @@ h2 {
     font-weight: 600;
     margin-bottom: 30px;
     text-transform: uppercase;
+    
+}
+#about .row,
+#study .row,
+ .row {
+    display: flex;
+    align-items: flex-start;
 }
 
 h3 {
@@ -165,9 +164,7 @@ p {
 }
 
 
-/* ===================================
-   6. IMMAGINI
-   =================================== */
+/* 6. IMMAGINI */
 img {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -185,9 +182,7 @@ img:hover {
 }
 
 
-/* ===================================
-   7. GALLERY
-   =================================== */
+/* 7. GALLERY */
 .gallery-title {
     display: flex;
     align-items: center;
@@ -252,9 +247,7 @@ img:hover {
 }
 
 
-/* ===================================
-   8. CONTACT
-   =================================== */
+/*8. CONTACT */
 .contact-title {
     font-size: 48px;
     text-align: center;
@@ -280,9 +273,7 @@ img:hover {
 }
 
 
-/* ===================================
-   9. MEDIA QUERIES - DESKTOP (1440px+)
-   =================================== */
+/*9. MEDIA QUERIES - DESKTOP (1440px+)*/
 @media (min-width: 1440px) {
     h1 {
         font-size: 96px;
@@ -291,6 +282,7 @@ img:hover {
 
     h2 {
         font-size: 96px;
+        line-height: 90px;
     }
 
     h3 {
@@ -309,7 +301,7 @@ img:hover {
     }
 
     .contact-title {
-        font-size: 128px;
+        font-size: 96px;
         text-align: left;
     }
 
@@ -319,10 +311,35 @@ img:hover {
 }
 
 
-/* ===================================
-   11. UTILITIES
-   =================================== */
+/* 10. UTILITIES */
 .img-container {
     position: relative;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* Metti tutto in colonna */
+    #study .row {
+        flex-direction: column;
+    }
+
+    /* Colonne a tutta larghezza */
+    #study .col-12.col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Riduci padding del content-box per mobile */
+    #study .content-box {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Immagine dopo il testo, piena larghezza */
+    #study .content-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 15px; /* spazio tra testo e immagine */
+    }
 }
