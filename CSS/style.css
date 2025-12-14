@@ -1,4 +1,6 @@
-/* Reset */
+/* ===================================
+   1. RESET & BASE
+   =================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +8,22 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #000;
     background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* HEADER */
+
+/* ===================================
+   2. HEADER & NAVIGATION
+   =================================== */
 .header-fixed {
     position: fixed;
     top: 0;
@@ -25,23 +32,30 @@ html {
     background: #D9D9D9;
     z-index: 1000;
     padding: 15px 0;
-    
 }
 
 .logo {
     height: 75px;
-    width: 70;
+    width: 70px;
 }
 
 .hamburger {
     cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
 }
 
 .text-end {
     text-align: right;
 }
 
-/* MENU TENDINA */
+
+/* ===================================
+   3. MENU TENDINA
+   =================================== */
 .menu-tendina {
     position: fixed;
     top: 0;
@@ -82,7 +96,10 @@ html {
     color: #666;
 }
 
-/* SEZIONI */
+
+/* ===================================
+   4. SEZIONI
+   =================================== */
 section {
     padding: 60px 0;
 }
@@ -100,12 +117,14 @@ section {
     background-color: #fff;
 }
 
-/* CONTENT BOX */
 .content-box {
     padding: 60px 40px;
 }
 
-/* TIPOGRAFIA */
+
+/* ===================================
+   5. TIPOGRAFIA
+   =================================== */
 h1 {
     font-size: 48px;
     font-weight: 700;
@@ -115,20 +134,22 @@ h1 {
 
 h2 {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
 h3 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.4;
     margin-top: 5px;
 }
 
 .numero {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1;
     vertical-align: baseline;
     margin-left: 0;
     position: relative;
@@ -142,7 +163,10 @@ p {
     max-width: 500px;
 }
 
-/* IMMAGINI */
+
+/* ===================================
+   6. IMMAGINI
+   =================================== */
 img {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -153,16 +177,24 @@ img:hover {
 }
 
 .img-hero {
-    max-width: 80%;
-    margin-left: auto;
+    max-width: 670px;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-/* GALLERY */
+
+/* ===================================
+   7. GALLERY
+   =================================== */
 .gallery-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     text-align: center;
     margin-bottom: 40px;
-    font-size: 64px;
+    font-size: 48px;
 }
 
 .card-project {
@@ -183,9 +215,47 @@ img:hover {
     max-width: 100%;
 }
 
-/* CONTACT */
-#contact h2 {
-    font-size: 64px;
+/* Bottone freccia */
+.btn-arrow {
+    background-color: transparent;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s ease;
+}
+
+.btn-arrow:hover {
+    transform: scale(1.1);
+}
+
+.btn-arrow:active {
+    transform: scale(0.95);
+}
+
+.btn-arrow svg path {
+    stroke: black;
+}
+
+/* Animazione rotazione freccia */
+#galleryArrow {
+    transition: transform 0.5s ease;
+}
+
+#galleryArrow.rotated {
+    transform: rotate(180deg);
+}
+
+
+/* ===================================
+   8. CONTACT
+   =================================== */
+.contact-title {
+    font-size: 48px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -208,18 +278,17 @@ img:hover {
     color: #666;
 }
 
-/* MEDIA QUERIES - PHONE */
-@media (min-width: 375px) {
+
+/* ===================================
+   9. MEDIA QUERIES - TABLET (768px+)
+   =================================== */
+@media (min-width: 768px) {
     h1 {
         font-size: 72px;
     }
 
-    .menu-tendina {
-        width: 175px;
-    }
-
     h2 {
-        font-size: 72px;
+        font-size: 64px;
     }
 
     h3 {
@@ -239,14 +308,6 @@ img:hover {
         padding: 60px 0;
     }
 
-    section {
-        padding: 0;
-    }
-
-    .img-hero {
-        max-width: 100%;
-    }
-
     .card-project h4 {
         font-size: 16px;
     }
@@ -256,11 +317,11 @@ img:hover {
     }
 
     .gallery-title {
-        font-size: 96px;
+        font-size: 64px;
     }
 
-    #contact h2 {
-        font-size: 96px;
+    .contact-title {
+        font-size: 64px;
     }
 
     #contact a {
@@ -268,27 +329,36 @@ img:hover {
     }
 }
 
-/* MEDIA QUERIES - DESKTOP */
-@media (min-width: 1440px) {
-    .menu-tendina {
-        width: 400px;
-    }
 
+/* ===================================
+   10. MEDIA QUERIES - DESKTOP (1440px+)
+   =================================== */
+@media (min-width: 1440px) {
     h1 {
         font-size: 96px;
+        line-height: 90px;
     }
 
     h2 {
         font-size: 96px;
     }
 
+    h3 {
+        font-size: 24px;
+    }
+
+    .menu-tendina {
+        width: 400px;
+    }
+
     .gallery-title {
         font-size: 128px;
         text-align: right;
+        justify-content: flex-end;
         padding-right: 40px;
     }
 
-    #contact h2 {
+    .contact-title {
         font-size: 128px;
         text-align: left;
     }
@@ -296,4 +366,13 @@ img:hover {
     #contact p {
         text-align: left;
     }
+}
+
+
+/* ===================================
+   11. UTILITIES
+   =================================== */
+.img-container {
+    position: relative;
+    width: 100%;
 }

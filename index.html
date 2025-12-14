@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Greta Carrozza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/bootstrap-grid.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body id="top">
+
     <!-- HEADER -->
-    <header class="header-fixed">
-        <div class="container">
+    <div class="container">
+        <header class="header-fixed">
             <div class="row align-items-center">
                 <div class="col-6">
                     <a href="#top"><img src="img/logo.png" class="logo" alt="Logo Greta Carrozza"></a>
@@ -25,8 +28,8 @@
                     </svg>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 
     <!-- MENU TENDINA -->
     <nav class="menu-tendina" id="menuTendina">
@@ -39,9 +42,9 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero-section">
-        <div class="container">
+    <!-- INIZIO -->
+    <div class="container">
+        <section class="hero-section">
             <div class="row g-4 align-items-center">
                 <div class="col-12 col-md-6">
                     <h1>Greta<br>Carrozza</h1>
@@ -51,12 +54,12 @@
                     <img src="img/foto_designer.JPG" alt="Greta Carrozza" class="img-fluid img-hero">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- ABOUT -->
-    <section id="about" class="section-gray">
-        <div class="container-fluid">
+    <div class="container">
+        <section id="about" class="section-gray">
             <div class="row g-0 align-items-center">
                 <div class="col-12 col-md-6 order-md-0">
                     <div class="content-box">
@@ -72,12 +75,12 @@
                     <img src="img/arco.png" class="img-fluid" alt="Arco d'Augusto, Rimini">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- STUDY -->
-    <section id="study" class="section-white">
-        <div class="container-fluid">
+    <div class="container">
+        <section id="study" class="section-white">
             <div class="row g-0 align-items-center">
                 <div class="col-12 col-md-6 order-md-0">
                     <img src="img/FOTO (2).png" class="img-fluid" alt="Maturità">
@@ -92,12 +95,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- POINT OF VIEW -->
-    <section id="pointofview" class="section-gray">
-        <div class="container-fluid">
+    <div class="container">
+        <section id="pointofview" class="section-gray">
             <div class="row g-0 align-items-center">
                 <div class="col-12 col-md-6 order-md-0">
                     <div class="content-box">
@@ -113,63 +116,74 @@
                     <img src="img/FOTO (1).png" class="img-fluid" alt="Università di Design San Marino">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- GALLERY -->
-    <section id="gallery" class="section-white">
-        <div class="container">
+    <div class="container">
+        <section id="gallery" class="section-white">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="gallery-title">GALLERY<span class="numero">04</span></h2>
+                    <h2 class="gallery-title">GALLERY<span class="numero">04</span>  
+                        <button class="btn-arrow" id="galleryNext">
+                            <svg id="galleryArrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="card-project">
+                            <img src="img/IMMAGINE SACRO.png" alt="Progetto Sacro" class="img-fluid">
+                            <h4>Workshop di Prodotto - Sacro</h4>
+                            <p>Realizzazione di una alzatina in carta per tenere il pane in tavola, incentrato sul tema della pace.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="card-project">
+                            <img src="img/IMMAGINE VORTIGA.png" alt="Progetto Vortiga" class="img-fluid">
+                            <h4>Vortiga</h4>
+                            <p>Progetto di Geometria per il Design, mostra una trasformazione geometrica.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="card-project">
+                            <img src="img/IMMAGINE ASTORIA.png" alt="Progetto Astoria" class="img-fluid">
+                            <h4>Identità visiva</h4>
+                            <p>Identità visiva per l'ex cinema Astoria di Rimini.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                        <div class="card-project">
+                            <img src="img/IMMAGINE BESTIARIO.png" alt="Progetto Bestiario" class="img-fluid">
+                            <h4>Workshop di Serigrafia - Bestiario</h4>
+                            <p>Realizzazione di un booklet interamente realizzato a mano in serigrafia.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card-project">
-                        <img src="img/IMMAGINE SACRO.png" alt="Progetto Sacro" class="img-fluid">
-                        <h4>Workshop di Prodotto - Sacro</h4>
-                        <p>Realizzazione di una alzatina in carta per tenere il pane in tavola, incentrato sul tema della pace.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card-project">
-                        <img src="img/IMMAGINE VORTIGA.png" alt="Progetto Vortiga" class="img-fluid">
-                        <h4>Vortiga</h4>
-                        <p>Progetto di Geometria per il Design, mostra una trasformazione geometrica.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card-project">
-                        <img src="img/IMMAGINE ASTORIA.png" alt="Progetto Astoria" class="img-fluid">
-                        <h4>Identità visiva</h4>
-                        <p>Identità visiva per l'ex cinema Astoria di Rimini.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <div class="card-project">
-                        <img src="img/IMMAGINE BESTIARIO.png" alt="Progetto Bestiario" class="img-fluid">
-                        <h4>Workshop di Serigrafia - Bestiario</h4>
-                        <p>Realizzazione di un booklet interamente realizzato a mano in serigrafia.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- CONTACT -->
-    <section id="contact" class="section-gray">
-        <div class="container">
+    <div class="container">
+        <section id="contact" class="section-gray">
             <div class="row">
                 <div class="col-12">
-                    <h2>CONTACT<span class="numero">05</span></h2>
+                    <h2 class="contact-title">CONTACT<span class="numero">05</span></h2>
                     <p><a href="https://www.instagram.com/gretacarrozza_/" target="_blank">@gretacarrozza_</a></p>
                     <p><a href="mailto:carrozza.gretaa@gmail.com">carrozza.gretaa@gmail.com</a></p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <script src="JS/script.js"></script>
+
 </body>
 </html>
