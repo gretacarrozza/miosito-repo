@@ -34,7 +34,6 @@ const gallerySets = [
     [
         { img: "img/IMMAGINE ONDALU.png", title: "Ondalù", desc: "Paralume in cartone ispirato agli anni 2010." },
         { img: "img/IMMAGINE HATBAG.png", title: "HAT-BAG", desc: "Cappello/borsa realizzato durante un laboratorio di prodotto." },
-     
     ]
 ];
 

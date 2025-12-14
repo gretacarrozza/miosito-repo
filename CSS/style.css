@@ -36,7 +36,8 @@ html {
 
 .logo {
     height: 75px;
-    width: 70px;
+    width: auto;
+    display: block;
 }
 
 .hamburger {
@@ -93,7 +94,7 @@ html {
 }
 
 .menu-tendina ul li a:hover {
-    color: #666;
+    color: #D9D9D9;
 }
 
 
@@ -275,63 +276,12 @@ img:hover {
 }
 
 #contact a:hover {
-    color: #666;
+    color: #D9D9D9;
 }
 
 
 /* ===================================
-   9. MEDIA QUERIES - TABLET (768px+)
-   =================================== */
-@media (min-width: 768px) {
-    h1 {
-        font-size: 72px;
-    }
-
-    h2 {
-        font-size: 64px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .content-box {
-        padding: 80px 60px;
-    }
-
-    .hero-section {
-        margin-top: 100px;
-        padding: 60px 0;
-    }
-
-    .card-project h4 {
-        font-size: 16px;
-    }
-
-    .card-project p {
-        font-size: 14px;
-    }
-
-    .gallery-title {
-        font-size: 64px;
-    }
-
-    .contact-title {
-        font-size: 64px;
-    }
-
-    #contact a {
-        font-size: 18px;
-    }
-}
-
-
-/* ===================================
-   10. MEDIA QUERIES - DESKTOP (1440px+)
+   9. MEDIA QUERIES - DESKTOP (1440px+)
    =================================== */
 @media (min-width: 1440px) {
     h1 {
