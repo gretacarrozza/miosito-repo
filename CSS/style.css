@@ -130,11 +130,11 @@ h2 {
     font-weight: 600;
     margin-bottom: 30px;
     text-transform: uppercase;
-    
 }
+
 #about .row,
 #study .row,
- .row {
+.row {
     display: flex;
     align-items: flex-start;
 }
@@ -247,7 +247,7 @@ img:hover {
 }
 
 
-/*8. CONTACT */
+/* 8. CONTACT */
 .contact-title {
     font-size: 48px;
     text-align: center;
@@ -273,7 +273,7 @@ img:hover {
 }
 
 
-/*9. MEDIA QUERIES - DESKTOP (1440px+)*/
+/* 9. MEDIA QUERIES - DESKTOP (1440px+) */
 @media (min-width: 1440px) {
     h1 {
         font-size: 96px;
@@ -287,10 +287,6 @@ img:hover {
 
     h3 {
         font-size: 24px;
-    }
-
-    .menu-tendina {
-        width: 400px;
     }
 
     .gallery-title {
@@ -340,6 +336,6 @@ img:hover {
         width: 100%;
         height: auto;
         display: block;
-        margin-top: 15px; /* spazio tra testo e immagine */
+        margin-top: 15px;
     }
 }

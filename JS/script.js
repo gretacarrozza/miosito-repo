@@ -1,5 +1,5 @@
 // ===================================
-// MENU HAMBURGER
+// MENU TENDINA
 // ===================================
 const menuButton = document.getElementById("menuButton");
 const menuTendina = document.getElementById("menuTendina");
@@ -9,10 +9,18 @@ menuButton.addEventListener("click", () => {
 });
 
 // Chiudi menu quando clicchi su un link
-document.querySelectorAll('.menu-tendina a').forEach(link => {
-    link.addEventListener('click', () => {
-        menuTendina.classList.remove('aperto');
+const menuLinks = menuTendina.querySelectorAll("a");
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menuTendina.classList.remove("aperto");
     });
+});
+
+// Chiudi menu quando clicchi fuori (sull'overlay)
+menuTendina.addEventListener("click", (e) => {
+    if (e.target === menuTendina) {
+        menuTendina.classList.remove("aperto");
+    }
 });
 
 
@@ -23,24 +31,27 @@ const galleryContainer = document.querySelector("#gallery .row.g-4");
 const nextButton = document.getElementById("galleryNext");
 const arrow = document.getElementById("galleryArrow");
 
-// ARRAY SET PROGETTI (2 set)
+// ARRAY SET PROGETTI
 const gallerySets = [
     [
-        { img: "img/IMMAGINE SACRO.png", title: "Workshop di Prodotto - Sacro", desc: "Alzatina in carta sul tema della pace." },
-        { img: "img/IMMAGINE VORTIGA.png", title: "Vortiga", desc: "Trasformazione geometrica." },
-        { img: "img/IMMAGINE ASTORIA.png", title: "Identità visiva", desc: "Identità per l'ex cinema Astoria." },
-        { img: "img/IMMAGINE BESTIARIO.png", title: "Workshop Serigrafia - Bestiario", desc: "Booklet realizzato a mano." }
+        { img: "img/immagine_sacro.png", title: "Workshop di Prodotto - Sacro", desc: "Alzatina in carta sul tema della pace." },
+        { img: "img/immagine_vortiga.png", title: "Vortiga", desc: "Trasformazione geometrica." },
+        { img: "img/immagine_astoria.png", title: "Identità visiva", desc: "Identità per l'ex cinema Astoria." },
+        { img: "img/immagine_bestiario.png", title: "Workshop Serigrafia - Bestiario", desc: "Booklet realizzato a mano." }
     ],
     [
-        { img: "img/IMMAGINE ONDALU.png", title: "Ondalù", desc: "Paralume in cartone ispirato agli anni 2010." },
-        { img: "img/IMMAGINE HATBAG.png", title: "HAT-BAG", desc: "Cappello/borsa realizzato durante un laboratorio di prodotto." },
+        { img: "img/immagine_ondalu.png", title: "Ondalù", desc: "Paralume in cartone ispirato agli anni 2010." },
+        { img: "img/immagine_hatbag.png", title: "HAT-BAG", desc: "Cappello/borsa realizzato durante un laboratorio di prodotto." }
     ]
 ];
 
 let currentSet = 0;
-let arrowRight = true;
+let rotation = 0;
 
-// Funzione per mostrare set corrente
+// Render iniziale
+renderGallery(currentSet);
+
+// Funzione per mostrare il set corrente
 function renderGallery(setIndex) {
     const set = gallerySets[setIndex];
     galleryContainer.innerHTML = "";
@@ -48,7 +59,7 @@ function renderGallery(setIndex) {
     set.forEach(item => {
         galleryContainer.innerHTML += `
             <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                <div class="card-project">
+                <div class="card-project" data-img="${item.img}" data-title="${item.title}" data-desc="${item.desc}">
                     <img src="${item.img}" alt="${item.title}" class="img-fluid">
                     <h4>${item.title}</h4>
                     <p>${item.desc}</p>
@@ -58,23 +69,13 @@ function renderGallery(setIndex) {
     });
 }
 
-// Click freccia → cambia set e ruota freccia
+// Click sul bottone NEXT
 nextButton.addEventListener("click", () => {
-    // Aggiorna set della gallery
-    if (arrowRight) {
-        currentSet = (currentSet + 1) % gallerySets.length;
-    } else {
-        currentSet = (currentSet - 1 + gallerySets.length) % gallerySets.length;
-    }
-
+    // Cambia set
+    currentSet = (currentSet + 1) % gallerySets.length;
     renderGallery(currentSet);
 
-    // Inverti direzione freccia
-    arrowRight = !arrowRight;
-
-    // Rotazione animata della freccia
-    arrow.classList.toggle("rotated");
+    // Ruota la freccia di 180° ogni click
+    rotation += 180;
+    arrow.style.transform = `rotate(${rotation}deg)`;
 });
-
-// Render iniziale (mostra il primo set)
-renderGallery(0);
